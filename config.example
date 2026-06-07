@@ -1,0 +1,25 @@
+# Name shown in Waybar.
+DISPLAY_NAME=vps
+
+# Multiple-server style: count or circles.
+# A single server always displays "vps: up/down".
+DISPLAY_STYLE=count
+
+# Timeout shared by all checks, in seconds.
+TIMEOUT=3
+
+# Add one SERVER line per server:
+# SERVER=name|ping|host
+# SERVER=name|http|endpoint|expected_status
+# SERVER=name|tcp|host|port
+SERVER=production|ping|203.0.113.10
+SERVER=api|http|https://example.com/health|200
+SERVER=ssh|tcp|203.0.113.10|22
+
+# Optional HTTP header shared by HTTP checks:
+# HTTP_HEADER=Authorization: Bearer replace-me
+
+# Text shown when only one server is configured.
+UP_TEXT=up
+DOWN_TEXT=down
+ERROR_TEXT=error

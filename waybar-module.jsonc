@@ -1,0 +1,8 @@
+"custom/vps": {
+  "exec": "~/.config/waybar/scripts/waybar-vps/waybar-vps.sh --status",
+  "return-type": "json",
+  "interval": 30,
+  "signal": 8,
+  "tooltip": true,
+  "on-click": "pkill -RTMIN+8 waybar"
+}

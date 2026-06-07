@@ -1,0 +1,15 @@
+#custom-vps {
+  padding: 0 10px;
+}
+
+#custom-vps.up {
+  color: #a6e3a1;
+}
+
+#custom-vps.down {
+  color: #f38ba8;
+}
+
+#custom-vps.error {
+  color: #f9e2af;
+}
