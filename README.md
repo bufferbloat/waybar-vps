@@ -98,22 +98,11 @@ The circles follow the order of the `SERVER=` lines.
 
 ## Styling
 
-The module returns `up`, `down`, and `error` classes. Example CSS is available
-in `style.css`.
+The status text and circles are colored by the script. `style.css` adds
+spacing around the module.
 
-```css
-#custom-vps.up {
-  color: #a6e3a1;
-}
-
-#custom-vps.down {
-  color: #f38ba8;
-}
-
-#custom-vps.error {
-  color: #f9e2af;
-}
-```
+The module also returns `up`, `down`, and `error` classes if you want to add
+custom backgrounds, borders, or other state-based styling.
 
 ## Requirements
 
