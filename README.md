@@ -1,9 +1,21 @@
-# waybar-vps
+<h1>
+    <p align="center">
+waybar-vps
+</p>
+</h1>
 
-A simple Waybar module to monitor one or more VPS servers.
+<p align="center">
+A simple <a href="https://github.com/Alexays/Waybar"><b>Waybar</b></a> module to monitor one or more VPS servers.
+</p>
+<p align="center">
+<img width="80" height="33" alt="image" src="https://github.com/user-attachments/assets/88e7f2a6-e25a-4588-b48f-ac90265938ab" />
+<img width="100" height="33" alt="image" src="https://github.com/user-attachments/assets/f884593d-d350-4798-9537-fe7820564c32" />
+  <img width="89" height="33" alt="image" src="https://github.com/user-attachments/assets/15c3e140-dea8-461e-8f4d-67eeb978a73a" />
+<img width="102" height="33" alt="image" src="https://github.com/user-attachments/assets/eb771e09-e937-431e-9102-07b762241990" />
+</p>
 
-It supports ping, HTTP endpoints, and TCP ports. Hovering the module shows the
-status of every configured server.
+Supports ping, HTTP endpoints, and TCP ports. Hover shows the
+status of every configured server. Used in my <a href="https://github.com/bufferbloat/dotfiles"><b>dotfiles</b></a>.
 
 ## Installation
 
@@ -57,9 +69,9 @@ SERVER=ssh|tcp|203.0.113.10|22
 
 With one server, the module keeps the simple status display:
 
-```text
-vps: up
-```
+<img width="80" height="33" alt="image" src="https://github.com/user-attachments/assets/88e7f2a6-e25a-4588-b48f-ac90265938ab" />
+<img width="100" height="33" alt="image" src="https://github.com/user-attachments/assets/f884593d-d350-4798-9537-fe7820564c32" />
+
 
 Example config:
 
@@ -74,9 +86,9 @@ SERVER=production|ping|203.0.113.10
 
 With multiple servers, the default `count` style shows how many are online:
 
-```text
-vps: 2/3
-```
+<img width="89" height="31" alt="image" src="https://github.com/user-attachments/assets/15c3e140-dea8-461e-8f4d-67eeb978a73a" />
+
+Example config:
 
 ```ini
 DISPLAY_NAME=vps
@@ -90,28 +102,39 @@ SERVER=ssh|tcp|203.0.113.10|22
 
 Use `DISPLAY_STYLE=circles` to show one colored circle per server:
 
-```text
-vps: ● ● ●
-```
+<img width="102" height="33" alt="image" src="https://github.com/user-attachments/assets/eb771e09-e937-431e-9102-07b762241990" />
+
 
 The circles follow the order of the `SERVER=` lines.
 
 ## Styling
 
-The status text and circles are colored by the script. `style.css` adds
-spacing around the module.
+The module returns `up`, `down`, and `error` classes. Example CSS is available
+in `style.css`.
 
-The module also returns `up`, `down`, and `error` classes if you want to add
-custom backgrounds, borders, or other state-based styling.
+```css
+#custom-vps.up {
+  color: #a6e3a1;
+}
+
+#custom-vps.down {
+  color: #f38ba8;
+}
+
+#custom-vps.error {
+  color: #f9e2af;
+}
+```
 
 ## Requirements
 
 - Bash
-- `jq`
-- `ping` for ping checks
-- `curl` for HTTP checks
-- GNU `timeout` for TCP checks
+- jq
+- curl
+- A server lol
+
 
 ## Contributing
 
 Issues and pull requests are welcome.
+
